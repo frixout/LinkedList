@@ -1,14 +1,67 @@
+public class LinkedListCustom<E> {
+    int size=0;
+    private Node head;
+    private Node tail;
 
-import java.io.*;
-import java.util.LinkedList;
+    public void add( E data){
+        Node newNode = new Node(data);
+        if (head == null){
+            head = newNode;
+            tail = newNode;
 
-public class LinkedListCustom {
-    Node head;
+        }
+        else{
+            tail.next = newNode;
+            newNode.prev = tail;
+            tail = newNode;
+        }
+        this.size++;
+    }
 
-    /*public LinkedListCustom add(LinkedListCustom list, E data){
-        Node new_node = new Node(data);
+    public E get( int item){
 
-    }*/
+        if (item < 0 || item >= size) {
+            throw new IndexOutOfBoundsException();
+        } else if(item<size/2){
+            Node runNode = head;
+            for (int i = 0; i < item; i++){
+                runNode =runNode.next;
+            }
+            return (E) runNode.data;
+        } else {
+            Node runNode = tail;
+            for (int i = size; i < item; i--) {
+                runNode = runNode.prev;
+            }
+            return (E) runNode.data;
+        }
+    }
+    public void set(int item, E data){
+        if (item < 0 || item >= size) {
+            throw new IndexOutOfBoundsException();
+        } else if(item<size/2){
+            Node runNode = head;
+            for (int i = 0; i < item; i++){
+                runNode =runNode.next;
+            }
+        } else {
+            Node runNode = tail;
+            for (int i = size; i < item; i--) {
+                runNode = runNode.prev;
+            }
+
+        }
+    }
+
+    public void printList(){
+        Node runNode = head;
+        System.out.print("[");
+        while (runNode.next !=null){
+            System.out.print(runNode.data + ", ");
+            runNode = runNode.next;
+        }
+        System.out.print(runNode.data + "]\n");
+    }
 
 }
 
