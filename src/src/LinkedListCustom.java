@@ -56,7 +56,7 @@ public class LinkedListCustom<E> {
                 for (int i = size - 1; i > item; i = i - 1) {
                     runNode = runNode.prev;
                 }
-                runNode.next = (Node) data;
+                //runNode.next = (Node) data;
             }
         }catch (IndexOutsideTheList e){
             e.printStackTrace();
