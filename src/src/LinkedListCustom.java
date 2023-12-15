@@ -29,7 +29,6 @@ public class LinkedListCustom<E> {
         Node<E> runNode = getRunNode(item);
         runNode.data= data;
     }
-
     private Node<E> getRunNode(int item) {
         Node<E> runNode;
         if (item < 0 || item > size - 1) {
@@ -40,7 +39,6 @@ public class LinkedListCustom<E> {
                 for (int i = 0; i < item; i++) {
                     runNode = runNode.next;
                 }
-
             } else {
                 runNode = tail;
                 for (int i = size - 1; i > item; i--) {
@@ -77,7 +75,7 @@ public class LinkedListCustom<E> {
         size--;
     }
 
-    private static <E> void extracted(Node<E> runNode) {
+    private void extracted(Node<E> runNode) {
         Node<E> runNodePrev = runNode.prev;
         Node<E> runNodeNext = runNode.next;
         runNodePrev.next = runNode.next;

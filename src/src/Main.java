@@ -17,7 +17,7 @@ public class Main {
         list.printList();
         list.add("Alina");
         list.printList();
-        System.out.println("Size: " + String.valueOf(list.getSize()) + "\n");
+        System.out.println("Size: " + (list.getSize()) + "\n");
         System.out.println("get: " + list.get(3));
 
         LinkedListCustom<String> list2= new LinkedListCustom<>();
@@ -29,22 +29,22 @@ public class Main {
         list2.printList();
         list2.add("alina");
         list2.printList();
-        System.out.println("Size: " + String.valueOf(list2.getSize()) + "\n");
+        System.out.println("Size: " + (list2.getSize()) + "\n");
         System.out.println("get: " + list2.get(2));
 
         list2.set(2,"firstName");
         list2.printList();
-        System.out.println("Size: " + String.valueOf(list2.getSize()) + "\n");
+        System.out.println("Size: " + (list2.getSize()) + "\n");
 
         list2.remove(0);
         list2.printList();
-        System.out.println("Size: " + String.valueOf(list2.getSize()) + "\n");
+        System.out.println("Size: " + (list2.getSize()) + "\n");
         list2.remove(4);
         list2.printList();
-        System.out.println("Size: " + String.valueOf(list2.getSize()) + "\n");
+        System.out.println("Size: " + (list2.getSize()) + "\n");
         list2.remove(2);
         list2.printList();
-        System.out.println("Size: " + String.valueOf(list2.getSize()) + "\n");
+        System.out.println("Size: " + (list2.getSize()) + "\n");
 
     }
 }
