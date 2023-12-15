@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) throws IndexOutsideTheList {
         // Press Alt+Enter with your caret at the highlighted text to see how
         // IntelliJ IDEA suggests fixing it.
-        LinkedListCustom list = new LinkedListCustom();
+        LinkedListCustom<String> list = new LinkedListCustom<>();
         list.add("Hi");
         list.add("my");
         list.add("name");
@@ -20,9 +20,10 @@ public class Main {
         list.add("Alina");
         list.printList();
         System.out.println("Size: " + String.valueOf(list.size) + "\n");
+
         System.out.println("get: " + list.get(6));
 
-        LinkedListCustom list2= new LinkedListCustom();
+        LinkedListCustom<String> list2= new LinkedListCustom<>();
         list2.add("Hello");
         list2.add("My");
         list2.add("Name");
@@ -33,9 +34,22 @@ public class Main {
         list2.add("alina");
         list2.printList();
         System.out.println("Size: " + String.valueOf(list2.size) + "\n");
+
         System.out.println("get: " + list2.get(2));
+
         list2.set(2,"firstName");
-        list2.printList();;
+        list2.printList();
+        System.out.println("Size: " + String.valueOf(list2.size) + "\n");
+
+        list2.remove(0);
+        list2.printList();
+        System.out.println("Size: " + String.valueOf(list2.size) + "\n");
+        list2.remove(4);
+        list2.printList();
+        System.out.println("Size: " + String.valueOf(list2.size) + "\n");
+        list2.remove(2);
+        list2.printList();
+        System.out.println("Size: " + String.valueOf(list2.size) + "\n");
 
     }
 }
